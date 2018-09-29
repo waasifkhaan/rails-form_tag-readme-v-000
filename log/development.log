@@ -357,3 +357,13 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 104.184.102.153 at 2018-09-29 05:39:35 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"af", "description"=>"New rails tags "}, "authenticity_token"=>"9cR26qRz64kliuRcBILo2g9M6zQ/ic0rg5QeN3yv0L3fZ2hnsuDU+05egh2tn9K44hwOmNIjcYx+0TApwDx3IA=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "af"], ["description", "New rails tags "], ["created_at", "2018-09-29 05:39:35.233239"], ["updated_at", "2018-09-29 05:39:35.233239"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://159.203.187.180:40564/posts
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
